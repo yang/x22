@@ -23,6 +23,8 @@ jobs:
         run: yarn
       - name: Build
         run: npx next build && npx next export
+        env:
+          PLASMIC_DEFAULT_HOST: https://d4c938a6a79908.localhost.run
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.0
         with:
